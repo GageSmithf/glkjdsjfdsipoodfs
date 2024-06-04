@@ -81,6 +81,10 @@ app.get('/apps/epic-games/7308/fortnite.html', (req, res) => {
   res.sendFile(path.join(__dirname, '/apps/epic-games/7308/fortnite.html'));
 });
 
+app.get('/apps/frogiee1/69420/custom-thingy-loader.html', (req, res) => {
+  res.sendFile(path.join(__dirname, '/apps/frogiee1/69420/custom-thingy-loader.html'));
+});
+
 // Proxy middleware to add cookies to the request
 const proxyMiddleware = createProxyMiddleware({
   target: targetURL,
