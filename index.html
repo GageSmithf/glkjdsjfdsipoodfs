@@ -839,9 +839,40 @@ data-styled.g100[id="sc-5465c186-1"]{content:"dyCjJu,"}/*!sc*/
                         setInterval(function() {
                           if (document.getElementsByClassName("sc-69333f43-14 DXbdB")[0].innerText === "Unsafe proxy or VPN detected!"){
                           console.error("NO")
-                              window.location.reload();
+                            // the popup thing
+                            function proxyrefresh() {
+                                var popup = document.createElement('div');
+                                popup.innerText = 'ngg detected proxy, refreshing';
+                                popup.style.position = 'fixed';
+                                popup.style.top = '0';
+                                popup.style.left = '0';
+                                popup.style.width = '100%';
+                                popup.style.height = '100%';
+                                popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                                popup.style.color = 'white';
+                                popup.style.display = 'flex';
+                                popup.style.justifyContent = 'center';
+                                popup.style.backdropFilter = 'blur(20px)';
+                                popup.style.alignItems = 'center';
+                                popup.style.fontSize = '2em';
+                                popup.style.zIndex = '9999';
+                                popup.style.opacity = '0';
+                                popup.style.transition = 'all 0.3s ease';
+                                popup.style.fontFamily = 'Clash Display Semibold';
+    
+                                document.body.appendChild(popup);
+    
+                                setTimeout(function() {
+                                    popup.style.opacity = '1';
+                                    setTimeout(function() {
+                                            location.reload();
+                                        }, 500);
+                                }, 100);
+                            }
+                            proxyrefresh();
                           }
                           else{
                           }
                   }, 1000);
                     </script>
+                    <link href="/font" rel="stylesheet">

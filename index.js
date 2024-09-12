@@ -31,6 +31,14 @@ app.get('/redirect10', (req, res) => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+app.get('/font', (req, res) => {
+  res.sendFile(path.join(__dirname, 'fonts.css'));
+});
+
+app.get('/mainfont', (req, res) => {
+  res.sendFile(path.join(__dirname, '/Fonts/Clash Display/ClashDisplay-Semibold.otf'));
+});
+
 // Serve the index.html when explicitly requested
 // Serve the index.html when explicitly requested
 app.get('/loading.mp4', (req, res) => {
