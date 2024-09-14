@@ -114,6 +114,12 @@ app.use((req, res, next) => {
   }
 });
 
+app.use((req, res, next) => {
+  res.setHeader('X-Frame-Options', 'ALLOWALL');  // Allows embedding in any iframe
+  next();
+});
+
+
 const PORT = 5000; // Change this to the desired port number
 app.listen(PORT, () => {
   console.log(`Proxy server listening on port ${PORT}`);
