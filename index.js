@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 // Replace the URL and cookies with your actual values
-const targetURL = 'https://now.gg/';
+const targetURL = 'https://mathstutor.life/';
 
 const cookies = [
   // ... (your cookie objects here)
