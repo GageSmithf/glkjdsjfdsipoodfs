@@ -119,9 +119,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.status(403).send("403 | the bypass is currently down due to reports of accounts being hacked, i believe the cause is now.gg sharing session tokens and or their shit is fucked to the max. for now, refrain from using now.gg and stay safe gangy gang gang. - frogie's arcade");
-});
+// app.use((req, res, next) => {
+//  res.status(403).send("403 | the bypass is currently down due to reports of accounts being hacked, i believe the cause is now.gg sharing session tokens and or their shit is fucked to the max. for now, refrain from using now.gg and stay safe gangy gang gang. - frogie's arcade");
+// });
 
 
 
