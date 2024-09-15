@@ -119,6 +119,12 @@ app.use((req, res, next) => {
   next();
 });
 
+// 404 Page Middleware
+app.use((req, res, next) => {
+  res.status(403).send('403 | the bypass is currently down due to reports of accounts being hacked, i believe the cause is now.gg sharing session tokens and or their shit is fucked to the max. for now, refrain from using now.gg and stay safe gangy gang gang. - frogie's arcade');
+});
+
+
 
 const PORT = 5000; // Change this to the desired port number
 app.listen(PORT, () => {
