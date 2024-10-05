@@ -1,6 +1,5 @@
 <script>
-                  localStorage.clear();
-                  sessionStorage.clear();
+          	// edging master real
                   alert('ngg bypass by frogiesarcade.win')
                                               if(window.location.hostname === "nowgg.lol"){
                                                 alert("you are running nowgg.lol instead of the traditional links! this is not recommended as it could lead to some filters blocking access to the site! we recommend Ultraviolet as the proxy to use on this site, if you cant get access to an ultraviolet link use rhodium.")
@@ -39,15 +38,27 @@
                       }, 100);
                   }
                                   setInterval(function() {
-                                    if (document.getElementsByClassName("sc-88dd4e90-14 kQaUXo")[0].innerText === "Unsafe proxy or VPN detected!"){
+                                    if (document.getElementsByClassName("sc-69333f43-19 cIaYNi")[0].innerText === "Unofficial proxy detected!"){
                                     console.error("NO")
                                       proxyrefresh();
                                     }
-                                    else if (document.getElementsByClassName("sc-69333f43-14 DXbdB")[0].innerText === "Unsafe proxy or VPN detected!"){
-                                    console.error("NO")
-                                      proxyrefresh();
-                                    }
-    
                             }, 1000);
+          		// gtag injection
+          		window.addEventListener('DOMContentLoaded', (event) => {
+              			const script1 = document.createElement('script');
+              			script1.async = true;
+              			script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-GZ7K0FK3LT';
+    
+              			const script2 = document.createElement('script');
+              			script2.innerHTML = `
+                  		window.dataLayer = window.dataLayer || [];
+                  		function gtag(){dataLayer.push(arguments);}
+                  		gtag('js', new Date());
+                  		gtag('config', 'G-GZ7K0FK3LT');
+              			`;
+    
+              			document.head.appendChild(script1);
+              			document.head.appendChild(script2);
+          		});
                               </script>
                               <link href="/font" rel="stylesheet">
