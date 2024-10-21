@@ -26,8 +26,6 @@ app.get('/redirect10', (req, res) => {
   res.redirect(302, '/uv/education/hvtrs8%2F-nmw%2Cge%2Frlcy-ulcwbg%2F5054-nmw');
 });
 
-// Serve the index.html when explicitly requested
-// Serve the index.html when explicitly requested
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -39,10 +37,13 @@ app.get('/mainfont', (req, res) => {
   res.sendFile(path.join(__dirname, '/Fonts/Clash Display/ClashDisplay-Semibold.otf'));
 });
 
-// Serve the index.html when explicitly requested
-// Serve the index.html when explicitly requested
 app.get('/loading.mp4', (req, res) => {
-  res.sendFile(path.join(__dirname, '/loading.mp4'));
+  const host = req.hostname;
+  if (host === 'nowgg.cloud') {
+    res.sendFile(path.join(__dirname, '/szvy.mp4'));
+  } else {
+    res.sendFile(path.join(__dirname, '/loading.mp4'));
+  }
 });
 
 app.get('/checksum.txt', (req, res) => {
