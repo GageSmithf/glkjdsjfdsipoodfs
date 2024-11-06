@@ -839,11 +839,13 @@ data-styled.g132[id="sc-b31097e4-1"]{content:"iASrQz,"}/*!sc*/
                                           else{
                                             console.log("we are chilling, running on " + window.location.host)
                                           }
-                      setTimeout(function() {
-                              if (document.getElementById('ng-logo')){
+                              if (!sessionStorage.getItem('fanum') === 'tax'){
+          			sessionStorage.setItem('fanum', 'tax');
                                   proxyrefresh()
                               }
-                          }, 2000);
+          else{
+          console.log('NOT first load 😭🙏')
+          }
               // the popup thing
               function proxyrefresh() {
                   var popup = document.createElement('div');

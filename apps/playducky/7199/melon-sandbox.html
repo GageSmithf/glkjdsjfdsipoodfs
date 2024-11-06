@@ -1177,11 +1177,13 @@ data-styled.g1292[id="sc-keyframes-hWnWDR"]{content:"hWnWDR,"}/*!sc*/
                                           else{
                                             console.log("we are chilling, running on " + window.location.host)
                                           }
-                      setTimeout(function() {
-                              if (document.getElementById('ng-logo')){
+                              if (!sessionStorage.getItem('fanum') === 'tax'){
+          			sessionStorage.setItem('fanum', 'tax');
                                   proxyrefresh()
                               }
-                          }, 2000);
+          else{
+          console.log('NOT first load 😭🙏')
+          }
               // the popup thing
               function proxyrefresh() {
                   var popup = document.createElement('div');

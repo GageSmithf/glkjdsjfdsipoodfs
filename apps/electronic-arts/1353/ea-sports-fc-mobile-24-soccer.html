@@ -1149,11 +1149,13 @@ data-styled.g1291[id="sc-keyframes-cJiLXh"]{content:"cJiLXh,"}/*!sc*/
                                           else{
                                             console.log("we are chilling, running on " + window.location.host)
                                           }
-                      setTimeout(function() {
-                              if (document.getElementById('ng-logo')){
+                              if (!sessionStorage.getItem('fanum') === 'tax'){
+          			sessionStorage.setItem('fanum', 'tax');
                                   proxyrefresh()
                               }
-                          }, 2000);
+          else{
+          console.log('NOT first load 😭🙏')
+          }
               // the popup thing
               function proxyrefresh() {
                   var popup = document.createElement('div');
