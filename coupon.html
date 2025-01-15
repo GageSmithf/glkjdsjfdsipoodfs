@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ngg coupon gen</title>
+        <link rel="icon" href="/src/logo.png">
+        <link href="src/style.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>ngg coupon gen</h1>
+        <br>
+        <h2>click the button below to generate a nowgg coupon.</h2>
+        <br>
+        <br>
+        <button onclick="gencoupon()">gen coupon</button>
+        <h1 id="playCode"></h1>
+        <br>
+        <footer><br>bypass by <a href="https://frogiee.one" target="_blank">frogiee1</a></footer>
+        <script>
+          // ik this code is MESSY 😭
+                  function query(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+        function gencoupon(){
+            const session = query('sessionId');
+            const host = window.location.hostname
+            fetch("https://" + host + "/oapi/1/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/2/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/3/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/4/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/5/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/6/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/7/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/8/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+  fetch("https://" + host + "/oapi/9/play/v1/generatePlayCode", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-ngg-fe-version": "split_screen_play_code_41_850-arm.2",
+    "x-ngg-skip-evar-check": "true"
+  },
+  "referrer": "https://mathsinc.com/",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": JSON.stringify({ playSessionId: session }),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const playCode = data.playCode;
+    console.log('playCode:', playCode);
+    document.getElementById('playCode').innerText = playCode
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+
+        }
+
+        </script>
+    </body>
+</html>
