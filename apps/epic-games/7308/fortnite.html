@@ -1081,13 +1081,15 @@ data-styled.g1068[id="sc-keyframes-lbWRkT"]{content:"lbWRkT,"}/*!sc*/
                   console.log('NOT first load 😭🙏')
               }
               // goodbye now.gg hello nowgg.lol ahh ad removal
-              setInterval(function() {
+              if (!window.location.href === "/"){
+                  setInterval(function() {
                   document.getElementsByClassName('sc-978a7a9c-0 jUWcJN')[0].remove();
               }, 1000);
+              }
               // the coupon button thing
               setInterval(function() {
-                  let thing = document.getElementsByClassName('sc-2754a134-0 sc-f5f209cb-2 gZvBAB gWqGao')[0].href
-                  document.getElementsByClassName('sc-2754a134-0 sc-f5f209cb-2 gZvBAB gWqGao')[0].href = thing.replace("mathsinc.com/", window.location.hostname + "/coupon");
+                  let thing = document.querySelector("a").href
+                  document.querySelector("a").href = thing.replace("mathsinc.com/", window.location.hostname + "/coupon");
               }, 1000);
               // the popup thing
               function proxyrefresh(text) {
@@ -1133,11 +1135,11 @@ data-styled.g1068[id="sc-keyframes-lbWRkT"]{content:"lbWRkT,"}/*!sc*/
     
                   const script2 = document.createElement('script');
                   script2.innerHTML = `
-                                                              window.dataLayer = window.dataLayer || [];
-                                                              function gtag(){dataLayer.push(arguments);}
-                                                              gtag('js', new Date());
-                                                              gtag('config', 'G-GZ7K0FK3LT');
-                                                              `;
+                                                                        window.dataLayer = window.dataLayer || [];
+                                                                        function gtag(){dataLayer.push(arguments);}
+                                                                        gtag('js', new Date());
+                                                                        gtag('config', 'G-GZ7K0FK3LT');
+                                                                        `;
     
                   document.head.appendChild(script1);
                   document.head.appendChild(script2);
