@@ -1194,14 +1194,12 @@ data-styled.g1310[id="sc-keyframes-lbWRkT"]{content:"lbWRkT,"}/*!sc*/
               }
               );
               // goodbye now.gg hello nowgg.lol ahh ad removal
-                 // setInterval(function() {
-                     // document.getElementsByClassName('sc-978a7a9c-0 jUWcJN')[0].remove()
-                //  }, 1000);
-              // the coupon button thing
-              setInterval(function() {
-                  let thing = document.querySelector("a").href
-                  document.querySelector("a").href = thing.replace("restudythis.com/", window.location.hostname + "/coupon");
-              }, 1000);
+          	document.querySelector('header').remove()
+                 setInterval(function() {
+                  if (document.getElementsByClassName('sc-978a7a9c-0 jUWcJN')[0]) {
+                      document.getElementsByClassName('sc-978a7a9c-0 jUWcJN')[0].remove()
+                  }
+                  }, 1000);
               // the popup thing
               function proxyrefresh(text) {
                   var popup = document.createElement('div');
@@ -1246,11 +1244,11 @@ data-styled.g1310[id="sc-keyframes-lbWRkT"]{content:"lbWRkT,"}/*!sc*/
     
                   const script2 = document.createElement('script');
                   script2.innerHTML = `
-                                                                                            window.dataLayer = window.dataLayer || [];
-                                                                                            function gtag(){dataLayer.push(arguments);}
-                                                                                            gtag('js', new Date());
-                                                                                            gtag('config', 'G-GZ7K0FK3LT');
-                                                                                            `;
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-GZ7K0FK3LT');
+                  `;
     
                   document.head.appendChild(script1);
                   document.head.appendChild(script2);
